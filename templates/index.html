@@ -1,0 +1,20 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script type=text/javascript>
+  function add_files(data) {
+      $.each(data, function(key, val) {
+      $("#result").text(elem);
+  };
+  $(function() {
+    $('a#calculate').bind('click', function() {
+      $.getJSON('/file_list', {
+      }, function(data) {
+        $("#result").text(data.result);
+        add_files(data);
+      });
+      return false;
+    });
+  });
+</script>
+<h1>file_list</h1>
+   <span id=result>?</span>
+<p><a href=# id=calculate>list files</a>
